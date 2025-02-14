@@ -11,6 +11,7 @@ public class GameService {
      * This variable represents a secret number. This variable can be referenced anywhere within this GameService class.
      */
     public double secretNumber;
+    
 
     /**
      * A constructor that will create a GameService object and, by default, set the secretNumber variable to 3.14.
@@ -27,6 +28,6 @@ public class GameService {
      * @return true if guessNumber is equal to the secretNumber, false otherwise.
      */
     public boolean checkGuess(double guessNumber) {
-        return false;
+        return Math.abs(guessNumber - secretNumber) < 0.001;
     }
 }
